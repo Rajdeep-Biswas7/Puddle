@@ -15,11 +15,10 @@
             <p class="text-green-600 font-bold mt-2">${{ item.price }}</p>
             <div>
                 <a href="{% url 'item:details' item.pk %}">
-                    <img src="{{item.image.url}}" class="rounded-t-xl">
+                    <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">View Details</button>
                 </a>
-                <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">View Details</button>
             </div>
-   </div>
+          </div>
         </div>
       {% endfor %}
     </div>
