@@ -17,6 +17,14 @@
             <div class="mb-6">
                 <label for="password" class="block text-gray-700 font-semibold mb-2">Password</label>
                 <input type="password" id="password" name="password" required class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300">
+                
+                {% if form.password.errors %}
+                    <p class="text-red-500 text-sm mt-2">{{ form.password.errors }}
+                        {%for error in form.password.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </p>
+                {% endif %}
             </div>
             <button type="submit" class="w-full py-3 bg-teal-500 text-white font-semibold rounded hover:bg-teal-700">Sign Up</button>
         </form>

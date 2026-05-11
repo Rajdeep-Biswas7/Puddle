@@ -19,7 +19,7 @@ def signup(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('core:index')
+            return redirect('/login/')
     else:
         form = SignUpForm()
 
